@@ -7,6 +7,7 @@ import "@fontsource/manrope"; // Import Manrope font
 import "@fontsource/bebas-neue"; // Import Bebas Neue font
 import "@fontsource/inter"; // Import Inter font
 import "@fontsource/roboto"; // Import Roboto font
+import About from "./pages/About";
 
 function App() {
   let theme = createTheme({
@@ -20,24 +21,24 @@ function App() {
       },
     },
     typography: {
-      fontFamily: 'Manrope',
+      fontFamily: "Manrope",
       h1: {
-        fontFamily: 'Bebas Neue',
+        fontFamily: "Bebas Neue",
       },
       h2: {
-        fontFamily: 'Bebas Neue',
+        fontFamily: "Bebas Neue",
       },
       h3: {
-        fontFamily: 'Bebas Neue',
+        fontFamily: "Bebas Neue",
       },
       h4: {
-        fontFamily: 'Bebas Neue',
+        fontFamily: "Bebas Neue",
       },
       h5: {
-        fontFamily: 'Bebas Neue',
+        fontFamily: "Bebas Neue",
       },
       h6: {
-        fontFamily: 'Bebas Neue',
+        fontFamily: "Bebas Neue",
       },
       button: {
         fontFamily: '"Roboto", "Inter"',
@@ -48,13 +49,14 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Box className="App">
-        <Header />
         <Router>
+          <Header />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
           </Routes>
+          <Footer />
         </Router>
-        <Footer />
       </Box>
     </ThemeProvider>
   );

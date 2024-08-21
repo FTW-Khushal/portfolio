@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -21,19 +25,24 @@ const ContactForm = () => {
       message: Yup.string().required('Message is required'),
     }),
     onSubmit: (values, { resetForm }) => {
-      // EmailJS configuration
+      setIsSubmitting(true);
       emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         values,
-        'YOUR_USER_ID'
+        {
+          publicKey: `${process.env.REACT_APP_PUBLIC_KEY}`,
+        }
       )
       .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        resetForm(); // Reset the form after successful submission
+        toast.success('Success, I\'ll try to respond ASAP, One Love ');
+        resetForm();
       })
       .catch((err) => {
-        console.log('FAILED...', err);
+        toast.error('Failed to send email. Please try again or reach out on social media');
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
     },
   });
@@ -89,6 +98,7 @@ const ContactForm = () => {
           Subject
         </label>
         <TextField
+        placeholder='Hi!'
           fullWidth
           size="medium"
           variant="outlined"
@@ -134,6 +144,7 @@ const ContactForm = () => {
         <Button
           variant="contained"
           type="submit"
+          disabled={isSubmitting}
           sx={{
             borderRadius: 28,
             fontWeight: "700",
@@ -143,9 +154,10 @@ const ContactForm = () => {
             paddingBottom: "8px",
           }}
         >
-          Submit
+          {isSubmitting ? 'Sending...' : 'Submit'}
         </Button>
       </form>
+      <ToastContainer theme="dark"  />
     </Box>
   );
 };

@@ -48,7 +48,7 @@ const FeaturedProjects = () => {
 
 
   return (
-    <Container maxWidth="xl" sx={{paddingBottom:"20px"}}>
+    <Container maxWidth="lg" sx={{paddingBottom:"20px"}}>
       <Box marginTop={"80px"} marginBottom={"20px"}>
         <Typography
           color="textPrimary"
