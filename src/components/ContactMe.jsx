@@ -78,7 +78,7 @@ const ContactMe = () => {
 
                 <IconButton
                   component="a"
-                  href="https://www.linkedin.com/in/khushal-khunt"
+                  href="https://github.com/FTW-Khushal"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mr-6"
@@ -90,19 +90,19 @@ const ContactMe = () => {
 
                 <IconButton
                   component="a"
-                  href="https://www.linkedin.com/in/khushal-khunt"
+                  href="https://x.com/khushal_y_khunt"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mr-6"
                 >
                   <Icon>
-                    <img src={TweeterIcon} alt="tweeter" />
+                    <img src={TweeterIcon} alt="x formerly tweeter" />
                   </Icon>
                 </IconButton>
 
                 <IconButton
                   component="a"
-                  href="https://www.linkedin.com/in/khushal-khunt"
+                  href="https://www.instagram.com/khushal_khunt"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mr-6"

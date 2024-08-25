@@ -18,8 +18,9 @@ const ProjectCard = ({ data }) => {
               damping: 20,
             }}
             viewport={{ once: true, amount: 0.5 }}
+            className="h-full"
           >
-            <Box className="bg-[#1A1A1A] rounded-[16px] relative flex items-center justify-center px-14 py-32">
+            <Box className="bg-[#1A1A1A] rounded-[16px] relative flex items-center justify-center h-full lg:px-10 lg:py-10 px-4 py-20">
               {data.tag && (
                 <Box className="bg-[#0A0A0A] rounded-full absolute top-0 left-0 mx-4 my-4 px-4 py-2">
                   <Typography
@@ -34,11 +35,11 @@ const ProjectCard = ({ data }) => {
                 </Box>
               )}
 
-              <Box className="w-full h-80">
+              <Box className="aspect-w-16 aspect-h-9">
                 {" "}
                 {/* Adjust height as needed */}
                 <img
-                  src="https://via.placeholder.com/1200x2420"
+                  src={data.img}
                   alt={data.imgAlt || "Placeholder image"}
                   className="w-full h-full object-cover rounded-2xl border border-black"
                 />

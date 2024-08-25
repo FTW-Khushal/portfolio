@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import IconButton from '@mui/material/IconButton';
-import beepSound from '../assets/audioMP4/censor-beep-102309.mp3';
+import beepSound from '../assets/audioMP3/khushal_khunt.mp3';
 import GraphicEqRoundedIcon from '@mui/icons-material/GraphicEqRounded';
 import VolumeUpRoundedIcon from '@mui/icons-material/VolumeUpRounded';
 import { Box } from '@mui/material';
