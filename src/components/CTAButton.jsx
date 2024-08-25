@@ -13,9 +13,9 @@ const CustomButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-const CTAButton = ({ text, icon: Icon }) => {
+const CTAButton = ({ text, icon: Icon, onClick }) => {
   return (
-    <CustomButton>
+    <CustomButton onClick={onClick}>
       <span className="flex items-center justify-between w-full">
         <span className="ml-4 mr-3">{text}</span>
         <span className="hidden md:block mx-3 my-3 w-3 h-3 bg-black rounded-full"></span>

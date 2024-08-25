@@ -5,7 +5,11 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
   const navigate = useNavigate();
 
-  const menuItems = [["Work", "featured-projects"], ["About", "about"], ["Contact", "contact"]];
+  const menuItems = [
+    ["Work", "featured-projects"],
+    ["About", "about"],
+    ["Contact", "contact"],
+  ];
   const menuItemStyle = {
     textTransform: "none",
     fontSize: "16px",
@@ -21,12 +25,14 @@ const Header = () => {
             fontSize: "32px",
             fontWeight: "400",
             letterSpacing: "-0.32px",
-            cursor:"pointer"
+            cursor: "pointer",
           }}
           color="textSecondary"
           variant="h1"
           component="h1"
-          onClick={() => {navigate("/")}}
+          onClick={() => {
+            navigate("/");
+          }}
         >
           KHUSHAL KHUNT
         </Typography>
@@ -34,7 +40,17 @@ const Header = () => {
         <ul className="hidden md:flex items-center space-x-5">
           {menuItems.map((item) => (
             <li>
-              <Button color="secondary" variant="text" sx={menuItemStyle} onClick={() => window.location.hash = item[1]}>
+              <Button
+                color="secondary"
+                variant="text"
+                sx={menuItemStyle}
+                onClick={() => {
+                  const contactSection = document.getElementById(item[1]);
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
                 {item[0]}
               </Button>
             </li>
@@ -56,7 +72,12 @@ const Header = () => {
 
             {menuItems.map((item) => (
               <li className="flex justify-center w-full">
-                <Button color="secondary" variant="text" sx={menuItemStyle} onClick={() => window.location.hash = item[1]}>
+                <Button
+                  color="secondary"
+                  variant="text"
+                  sx={menuItemStyle}
+                  onClick={() => (window.location.hash = item[1])}
+                >
                   {item[0]}
                 </Button>
               </li>

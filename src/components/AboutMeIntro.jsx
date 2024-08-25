@@ -7,7 +7,7 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import CTAButton from "./CTAButton";
 import GithubIcon from "../assets/imageSVG/bxl-github.svg";
 import LinkedinIcon from "../assets/imageSVG/bxl-linkedin.svg";
@@ -15,8 +15,17 @@ import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import Collapsible from "react-collapsible";
 import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 const AboutMeIntro = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollToTop) {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
   const [isLanguagesOpen, setIsLanguagesOpen] = React.useState(false);
   const [isFrameWorkAndLibsOpen, setIisFrameWorkAndLibsOpen] =
     React.useState(false);
@@ -245,10 +254,18 @@ const AboutMeIntro = () => {
 
             <Box>
               <CTAButton
+                onClick={() => {
+                  const url =
+                    "https://firebasestorage.googleapis.com/v0/b/portfolio-2c12f.appspot.com/o/Resume.pdf?alt=media&token=162c7615-a4b4-42e9-a2de-ffb6f334577a";
+                  window.open(url, "_blank", "noopener,noreferrer");
+                }}
                 text="DOWNLOAD RESUME"
                 icon={FileDownloadOutlinedIcon}
               />
               <IconButton
+                href="https://github.com/FTW-Khushal"
+                target="_blank"
+                rel="noopener noreferrer"
                 size="large"
                 sx={{
                   background: "#222",
@@ -262,6 +279,9 @@ const AboutMeIntro = () => {
               </IconButton>
 
               <IconButton
+                href="https://www.linkedin.com/in/khushal-khunt"
+                target="_blank"
+                rel="noopener noreferrer"
                 size="large"
                 className="ml-2"
                 sx={{ background: "#222" }}

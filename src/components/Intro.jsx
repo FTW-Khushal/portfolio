@@ -12,7 +12,6 @@ import GithubIcon from "../assets/imageSVG/bxl-github.svg";
 import LinkedinIcon from "../assets/imageSVG/bxl-linkedin.svg";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import PronunciationButton from "./PronunciationButton";
-import VolumeUpRoundedIcon from "@mui/icons-material/VolumeUpRounded";
 import { motion } from "framer-motion";
 
 const Intro = () => {
@@ -60,8 +59,20 @@ const Intro = () => {
                 accessible and user friendly applications
               </Typography>
               <Box>
-                <CTAButton text="CONTACT ME" icon={ArrowOutwardIcon} />
+                <CTAButton
+                  onClick={() => {
+                    const contactSection = document.getElementById("contact");
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  text="CONTACT ME"
+                  icon={ArrowOutwardIcon}
+                />
                 <IconButton
+                  href="https://github.com/FTW-Khushal"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   size="large"
                   sx={{
                     background: "#222",
@@ -75,6 +86,9 @@ const Intro = () => {
                 </IconButton>
 
                 <IconButton
+                  href="https://www.linkedin.com/in/khushal-khunt"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   size="large"
                   className="ml-2"
                   sx={{ background: "#222" }}
@@ -103,11 +117,13 @@ const Intro = () => {
               sx={{
                 display: "flex",
                 justifyContent: { sm: "center", md: "left" },
+                height:"70vh",
+                width:"100%"
               }}
             >
               <img
-                className="rounded-[16px]"
-                src="https://via.placeholder.com/600x663"
+                className="rounded-[16px] w-full object-cover object-[20%_20%]"
+                src="https://firebasestorage.googleapis.com/v0/b/portfolio-2c12f.appspot.com/o/PXL_20240227_232303506_orignal.jpg?alt=media&token=3f84e992-89a0-47fd-a0df-d4296b77d1c1"
                 alt="khushal"
               ></img>
             </Box>

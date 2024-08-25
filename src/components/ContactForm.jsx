@@ -98,7 +98,7 @@ const ContactForm = () => {
           Subject
         </label>
         <TextField
-        placeholder='Hi!'
+        placeholder='Drop by to say hello'
           fullWidth
           size="medium"
           variant="outlined"
