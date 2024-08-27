@@ -53,15 +53,15 @@ const ContactMe = () => {
                   marginBottom: "32px",
                 }}
               >
-                For more info, here my{" "}
-                <Link
-                  href="https://firebasestorage.googleapis.com/v0/b/portfolio-2c12f.appspot.com/o/Resume.pdf?alt=media&token=ef577e6c-c8f2-4dda-878e-abefd06b1239" 
+                For more info, here is my{" "}
+                <a
+                  href="https://firebasestorage.googleapis.com/v0/b/portfolio-2c12f.appspot.com/o/Resume.pdf?alt=media&token=ef577e6c-c8f2-4dda-878e-abefd06b1239"
                   target="_blank"
-                  rel="noopener"
-                  className="underline decoration-[#D3E97A] leading-7 text-white underline-offset-[6px]"
+                  rel="noopener noreferrer"
+                  className="underline decoration-[#D3E97A] text-white underline-offset-[6px] hover:text-[#c7c7c7]"
                 >
                   resume
-                </Link>
+                </a>
               </Typography>
               <Box>
                 <IconButton
@@ -123,7 +123,7 @@ const ContactMe = () => {
                     type: "spring",
                     stiffness: 50,
                     damping: 20,
-                    delay:0.5
+                    delay: 0.5,
                   }}
                   viewport={{ once: true, amount: 0.5 }}
                 >
@@ -144,18 +144,18 @@ const ContactMe = () => {
                     type: "spring",
                     stiffness: 50,
                     damping: 20,
-                    delay:0.6
+                    delay: 0.6,
                   }}
                   viewport={{ once: true, amount: 0.5 }}
                 >
-                <Typography
-                  color="textSecondary"
-                  fontSize={"16px"}
-                  lineHeight={"160%"}
-                  variant="subtitle1"
-                >
-                  Design by Robert Garcia
-                </Typography>
+                  <Typography
+                    color="textSecondary"
+                    fontSize={"16px"}
+                    lineHeight={"160%"}
+                    variant="subtitle1"
+                  >
+                    Design by Robert Garcia
+                  </Typography>
                 </motion.div>
 
                 <motion.div
@@ -165,18 +165,18 @@ const ContactMe = () => {
                     type: "spring",
                     stiffness: 50,
                     damping: 20,
-                    delay:0.7
+                    delay: 0.7,
                   }}
                   viewport={{ once: true, amount: 0.5 }}
                 >
-                <Typography
-                  color="textSecondary"
-                  fontSize={"16px"}
-                  lineHeight={"160%"}
-                  variant="subtitle1"
-                >
-                  Developed by Khushal Khunt
-                </Typography>
+                  <Typography
+                    color="textSecondary"
+                    fontSize={"16px"}
+                    lineHeight={"160%"}
+                    variant="subtitle1"
+                  >
+                    Developed by Khushal Khunt
+                  </Typography>
                 </motion.div>
 
                 <motion.div
@@ -186,18 +186,18 @@ const ContactMe = () => {
                     type: "spring",
                     stiffness: 50,
                     damping: 20,
-                    delay:0.8
+                    delay: 0.8,
                   }}
                   viewport={{ once: true, amount: 0.5 }}
                 >
-                <Typography
-                  color="textSecondary"
-                  fontSize={"16px"}
-                  lineHeight={"160%"}
-                  variant="subtitle1"
-                >
-                  Free for All {new Date().getFullYear()}
-                </Typography>
+                  <Typography
+                    color="textSecondary"
+                    fontSize={"16px"}
+                    lineHeight={"160%"}
+                    variant="subtitle1"
+                  >
+                    Free for All {new Date().getFullYear()}
+                  </Typography>
                 </motion.div>
               </Box>
             </Box>
@@ -219,92 +219,90 @@ const ContactMe = () => {
           </motion.div>
 
           <Box sx={{ display: { md: "none", marginTop: "80px" } }}>
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 50,
+                damping: 20,
+                delay: 0.5,
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <Typography
+                color="textSecondary"
+                fontSize={"16px"}
+                lineHeight={"160%"}
+                variant="subtitle1"
+              >
+                Photography by Tirth Mangukiya
+              </Typography>
+            </motion.div>
 
-                <motion.div
-                  initial={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 50,
-                    damping: 20,
-                    delay:0.5
-                  }}
-                  viewport={{ once: true, amount: 0.5 }}
-                >
-                  <Typography
-                    color="textSecondary"
-                    fontSize={"16px"}
-                    lineHeight={"160%"}
-                    variant="subtitle1"
-                  >
-                    Photography by Tirth Mangukiya
-                  </Typography>
-                </motion.div>
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 50,
+                damping: 20,
+                delay: 0.6,
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <Typography
+                color="textSecondary"
+                fontSize={"16px"}
+                lineHeight={"160%"}
+                variant="subtitle1"
+              >
+                Design by Robert Garcia
+              </Typography>
+            </motion.div>
 
-                <motion.div
-                  initial={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 50,
-                    damping: 20,
-                    delay:0.6
-                  }}
-                  viewport={{ once: true, amount: 0.5 }}
-                >
-                <Typography
-                  color="textSecondary"
-                  fontSize={"16px"}
-                  lineHeight={"160%"}
-                  variant="subtitle1"
-                >
-                  Design by Robert Garcia
-                </Typography>
-                </motion.div>
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 50,
+                damping: 20,
+                delay: 0.7,
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <Typography
+                color="textSecondary"
+                fontSize={"16px"}
+                lineHeight={"160%"}
+                variant="subtitle1"
+              >
+                Developed by Khushal Khunt
+              </Typography>
+            </motion.div>
 
-                <motion.div
-                  initial={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 50,
-                    damping: 20,
-                    delay:0.7
-                  }}
-                  viewport={{ once: true, amount: 0.5 }}
-                >
-                <Typography
-                  color="textSecondary"
-                  fontSize={"16px"}
-                  lineHeight={"160%"}
-                  variant="subtitle1"
-                >
-                  Developed by Khushal Khunt
-                </Typography>
-                </motion.div>
-
-                <motion.div
-                  initial={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 50,
-                    damping: 20,
-                    delay:0.8
-                  }}
-                  viewport={{ once: true, amount: 0.5 }}
-                >
-                <Typography
-                  color="textSecondary"
-                  fontSize={"16px"}
-                  lineHeight={"160%"}
-                  variant="subtitle1"
-                >
-                  Free for All {new Date().getFullYear()}
-                </Typography>
-                </motion.div>
-              </Box>
-
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 50,
+                damping: 20,
+                delay: 0.8,
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <Typography
+                color="textSecondary"
+                fontSize={"16px"}
+                lineHeight={"160%"}
+                variant="subtitle1"
+              >
+                Free for All {new Date().getFullYear()}
+              </Typography>
+            </motion.div>
+          </Box>
         </Grid>
       </Grid>
     </Container>
