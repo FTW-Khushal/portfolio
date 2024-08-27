@@ -131,6 +131,9 @@ const ProjectCard = ({ data }) => {
                     <Box marginTop={"48px"}>
                       {data.links.demo && (
                         <Button
+                        href={data.links.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
                           endIcon={<ArrowOutwardIcon />}
                           sx={{
                             borderBottom: "solid 1px #d3e97a",
@@ -145,6 +148,9 @@ const ProjectCard = ({ data }) => {
                       )}
                       {data.links.github && (
                         <Button
+                        href={data.links.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
                           endIcon={<GithubIcon />}
                           sx={{
                             borderBottom: "solid 1px #d3e97a",

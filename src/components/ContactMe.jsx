@@ -55,7 +55,7 @@ const ContactMe = () => {
               >
                 For more info, here my{" "}
                 <Link
-                  href="your-resume-link" // Todo : add resume link
+                  href="https://firebasestorage.googleapis.com/v0/b/portfolio-2c12f.appspot.com/o/Resume.pdf?alt=media&token=ef577e6c-c8f2-4dda-878e-abefd06b1239" 
                   target="_blank"
                   rel="noopener"
                   className="underline decoration-[#D3E97A] leading-7 text-white underline-offset-[6px]"
