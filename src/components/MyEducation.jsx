@@ -29,7 +29,7 @@ const MyEducation = () => {
 
       description: {
         title: "Relevant Coursework",
-        desc: "Software Engineering, Database Management, Mobile Application Development",
+        desc: "Software Engineering, Database Management, Full Stack Development",
         skillsAcquired: [
           {
             name: "Team Projects",

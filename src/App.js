@@ -1,13 +1,33 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import { Box, createTheme, ThemeProvider } from "@mui/material";
-import "@fontsource/manrope"; // Import Manrope font
-import "@fontsource/bebas-neue"; // Import Bebas Neue font
-import "@fontsource/inter"; // Import Inter font
-import "@fontsource/roboto"; // Import Roboto font
+import "@fontsource/manrope";
+import "@fontsource/bebas-neue";
+import "@fontsource/inter";
+import "@fontsource/roboto";
 import About from "./pages/About";
+import ReactGA from 'react-ga4';
+import React, { useEffect } from 'react';
+
+const MEASUREMENT_ID = "G-303EWNKBE4";
+ReactGA.initialize(MEASUREMENT_ID);
+
+function Analytics() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+
+  return null; // This component doesn't render anything visible
+}
 
 function App() {
   let theme = createTheme({
@@ -50,6 +70,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Box className="App">
         <Router>
+          <Analytics /> {/* Include the Analytics component inside the Router */}
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />

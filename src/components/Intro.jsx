@@ -55,7 +55,7 @@ const Intro = () => {
                   marginBottom: "40px",
                 }}
               >
-                A Vancouver based software developer passionate about building
+                A software developer passionate about building
                 accessible and user friendly applications
               </Typography>
               <Box>

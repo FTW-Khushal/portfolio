@@ -74,7 +74,7 @@ const AboutMeSection = () => {
               accessibility when developing. Passionate and curious about
               solving problems. Currently, I’m exploring AI and Real time web
               rendering While I am not programming, I enjoy going on camping and
-              plying video games. Learning more to improve skill.
+              plying video games.
             </Typography>
 
             <Button
