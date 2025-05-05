@@ -249,14 +249,14 @@ const AboutMeIntro = () => {
               Likes to focus on accessibility when developing. Passionate and
               curious about solving problems. Currently, I’m exploring AI ane
               Real time web rendering While I am not programming, I enjoy going
-              on camping and plying video games. Learning more to improve skill.
+              on camping and plying video games.
             </Typography>
 
             <Box>
               <CTAButton
                 onClick={() => {
                   const url =
-                    "https://firebasestorage.googleapis.com/v0/b/portfolio-2c12f.appspot.com/o/Resume.pdf?alt=media&token=162c7615-a4b4-42e9-a2de-ffb6f334577a";
+                    "https://firebasestorage.googleapis.com/v0/b/portfolio-2c12f.appspot.com/o/Resume%20Khushal%20Khunt.pdf?alt=media&token=4b703316-1a12-45f2-9098-a64fc7d88f54";
                   window.open(url, "_blank", "noopener,noreferrer");
                 }}
                 text="DOWNLOAD RESUME"
@@ -307,7 +307,7 @@ const AboutMeIntro = () => {
           >
             <Box>
               <img
-                src="https://via.placeholder.com/1224x700"
+                src="https://firebasestorage.googleapis.com/v0/b/portfolio-2c12f.appspot.com/o/khushal_portrait.jpg?alt=media&token=c6bbfbd6-1d7d-4f86-97ff-d817a91f2b32"
                 alt={"a man wearing a shirt"}
                 className="w-full h-full rounded-2xl"
               />
@@ -336,16 +336,21 @@ const AboutMeIntro = () => {
         <Grid item xs={12} md={6}>
           <Box>
             <Typography
-              color={"textSecondary"}
+              color="textSecondary"
               variant="subtitle1"
               sx={{
                 fontSize: "18px",
                 marginBottom: "32px",
               }}
             >
-              I am always looking to add more skills.Morbi egestas neque eu
-              blandit fermentum. Nulla ac lobortis ligula. Pellentesque ac ex at
-              purus faucibus tristique ut et dolor.
+              With 7 years of formal education and 3 years of hands-on
+              experience, I’ve spent the past decade immersed in the world of
+              computer science. Along the way, I've worked with both modern and
+              legacy technologies, building a well-rounded skill set across
+              full-stack, frontend, backend, and mobile development. I’m driven
+              by curiosity, committed to continuous learning, and always eager
+              to take on new challenges. Below is a selection of technologies
+              I've worked with—always growing as I grow.
             </Typography>
           </Box>
 

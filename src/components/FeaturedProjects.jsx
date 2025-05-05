@@ -7,6 +7,19 @@ const FeaturedProjects = () => {
   const projects = [
     {
       tag: "Conceptual Work",
+      img: "https://firebasestorage.googleapis.com/v0/b/portfolio-2c12f.appspot.com/o/prepup_banner_2.png?alt=media&token=521efbe0-03ad-453a-bb11-dac0639d7124",
+      imgAlt: "banner for prepup mobile app",
+      title: "PrepUp - Practice interviews anywhere",
+      description:
+        "PrepUp is a mobile app designed to help users practice interviews anytime, anywhere, offering an intelligent and responsive interview companion. Built with optimized React Native components, the app delivers a seamless UI/UX experience. It leverages GPT-4o Mini for real-time, AI-driven interactions, and enhances communication speed by 40% through BullMQ and Socket.IO integration for real-time updates.",
+      projectInfo: [
+        ["Year", "2024"],
+        ["Role", "Full Stack Developer"],
+      ],
+      links: { demo: "https://www.prepup.ca/", github: "https://github.com/shunsaku-sugita/prepup-backend" },
+    },
+    {
+      tag: "Conceptual Work",
       img: "https://firebasestorage.googleapis.com/v0/b/portfolio-2c12f.appspot.com/o/truvoye_social_banner.png?alt=media&token=516746a6-9d03-46c5-9d08-dcebe018a359",
       imgAlt: "banner for truvoye web app",
       title: "Truvoye - Logistics Management Platform",
@@ -31,19 +44,19 @@ const FeaturedProjects = () => {
       ],
       links: { demo: "https://play.google.com/store/apps/details?id=com.aspiration.postermaker.editor" },
     },
-    {
-      tag: "Worked On",
-      img: "https://firebasestorage.googleapis.com/v0/b/portfolio-2c12f.appspot.com/o/mirchi_banner.png?alt=media&token=2f3ed705-8bc2-4428-89da-8cb738872dfa",
-      imgAlt: "banner for mirchi android app",
-      title: "Mirchi - South Asian Dating",
-      description:
-        "Contributed to the development of the app, it features an intuitive interface that allows users to like, comment on photos, match, and engage through video snaps and text messages. I implemented the asynchronous disappearing video snap messaging feature, enhancing user interaction and connection. Additionally, the 'friendzone' feature was developed to help users build friendships, broadening the app's appeal beyond dating.",
-      projectInfo: [
-        ["Year", "2022"],
-        ["Role", "Android Engineer"],
-      ],
-      links: { demo: "https://play.google.com/store/apps/details?id=com.dating.mirchi" },
-    },
+    // {
+    //   tag: "Worked On",
+    //   img: "https://firebasestorage.googleapis.com/v0/b/portfolio-2c12f.appspot.com/o/mirchi_banner.png?alt=media&token=2f3ed705-8bc2-4428-89da-8cb738872dfa",
+    //   imgAlt: "banner for mirchi android app",
+    //   title: "Mirchi - South Asian Dating",
+    //   description:
+    //     "Contributed to the development of the app, it features an intuitive interface that allows users to like, comment on photos, match, and engage through video snaps and text messages. I implemented the asynchronous disappearing video snap messaging feature, enhancing user interaction and connection. Additionally, the 'friendzone' feature was developed to help users build friendships, broadening the app's appeal beyond dating.",
+    //   projectInfo: [
+    //     ["Year", "2022"],
+    //     ["Role", "Android Engineer"],
+    //   ],
+    //   links: { demo: "https://play.google.com/store/apps/details?id=com.dating.mirchi" },
+    // },
   ]
 
 

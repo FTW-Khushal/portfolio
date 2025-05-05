@@ -6,23 +6,22 @@ const MyExperience = () => {
   const experiences = [
     {
       job: {
-        title: "Software Engineer - Android",
+        title: "Software Engineer",
         timePeriod: "Aug 2021 - Mar 2023",
       },
       company: "Aspiration Solutions",
       link: "https://aspirationsolutions.com/",
-      description:
-        "Developed and maintained native Android applications, ensuring seamless functionality across multiple OS versions by adapting to new regulations and standards with each release. Spearheaded the modernization of legacy apps, improving compatibility and reducing crash rates by 30%. Enhanced user engagement by optimizing UI/UX design, resulting in a 20% increase in user retention. Successfully integrated API solutions, leading to a 15% reduction in load times and contributing to a 25% boost in user satisfaction ratings.",
+      description:["Built an Android app with WebRTC, increasing active users by 30% and engagement by 25%.", "Reduced API load by 66% by optimizing frontend queries for a Node.js + GraphQL backend.","Managed cloud deployments with CI/CD, ensuring zero-downtime releases and version control.","Collaborated with cross-functional teams to deliver high-quality features on schedule.","Conducted code reviews and mentored interns, fostering a culture of clean code and learning."],
     },
     {
       job: {
-        title: "Software Engineer - Intern",
+        title: "Full-Stack Developer Intern",
         timePeriod: "Feb 2021 - Jul 2021",
       },
       company: "Aspiration Solutions",
       link: "https://aspirationsolutions.com/",
       description:
-        "Engineered critical features for internal tools using JavaScript, Python, and SQL, driving a 30% improvement in workflow efficiency. Led the refactoring of a major legacy system, cutting maintenance costs by 25% and boosting application performance by 15%. Developed and deployed a new reporting dashboard, which reduced data retrieval times by 40% and provided actionable insights that enhanced decision-making. Contributed to projects that directly improved user experience, leading to a 20% increase in user satisfaction.",
+        ["Built features for an internal lead management tool using Java, JavaScript, and SQL, boosting efficiency by 30%.","Optimized recursive database queries and refactored logic, reducing load times by 20%.", "Implemented CI pipelines with GitHub Actions and wrote unit tests, cutting deployment errors by 30%.","Worked across backend (Spring Boot) and frontend (React.js) to debug and deliver production fi xes.", "Actively contributed in Agile ceremonies, aligning sprint goals with cross-functional teams."],
     },
   ];
 
@@ -115,7 +114,13 @@ const MyExperience = () => {
                       color="textSecondary"
                       component={"body2"}
                     >
-                      {experience.description}
+                      <ul style={{listStyleType: "disc", paddingLeft: "20px"}}>
+                        {experience.description.map((point, index) => (
+                          <li key={index}>
+                             {point}
+                          </li>
+                        ))}
+                      </ul>
                     </Typography>
                   </Box>
                 </Box>
